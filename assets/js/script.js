@@ -43,7 +43,7 @@ let radiologia = [
     }
 ]
 
-var traumatologia = [
+let traumatologia = [
     {
         hora: '08:00',
         especialista: 'maria paz altuzarra',
@@ -148,8 +148,7 @@ let dental = [
 ]
 
 
-
-var texto = "<tr><th>Hora</th><th>Especialista</th><th>Paciente</th><th>Rut</th><th>Previsión</th></tr>";
+let texto = "<tr><th>Hora</th><th>Especialista</th><th>Paciente</th><th>Rut</th><th>Previsión</th></tr>";
 
 for (var i = 0; i < radiologia.length; i++) {
     texto += `<tr>
@@ -158,14 +157,8 @@ for (var i = 0; i < radiologia.length; i++) {
         <td>${radiologia[i].paciente}</td>
         <td>${radiologia[i].rut}</td>
         <td>${radiologia[i].prevision}</td>
-        </tr>`;
+        </tr>`
 }
-document.getElementById("cuerpo-tabla").innerHTML = texto;
-
-
-
-
-
 
 function mostrar(datos) {
     for (let i = 0; i < datos.length; i++) {
@@ -176,7 +169,7 @@ function mostrar(datos) {
     document.write(`Primera atención: ${primero.paciente} - ${primero.prevision}, Última atención:${ultimo.prevision}<br>`)
 }
 
-
+document.getElementById("cuerpo-tabla").innerHTML = texto;
 mostrar(radiologia)
 mostrar(traumatologia)
 mostrar(dental)
